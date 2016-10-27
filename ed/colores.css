@@ -1,0 +1,205 @@
+.col{
+  background-color: #f2f2f2;
+ background-image: url("ed/imgs/fond.jpg");
+ background-repeat: no-repeat;
+
+width: 100%;
+ position: relative;
+ margin: 0 auto;
+
+
+}
+.i{
+    border-radius: 50px;
+
+}
+         .bajo{
+             top: 100px;
+             margin-top: 90px;
+             
+
+
+          }
+
+h2{
+    text-align: center;
+    color:aliceblue;
+    font-family: 'Codystar', cursive;
+}
+h2:hover{
+    color: crimson;
+}
+          h5{
+              color:aliceblue;
+
+
+          }
+          .le{
+              color: darkgray;
+          }
+
+
+          p{
+              visibility: hidden;
+          }
+
+
+           .limon{
+              background:#f4c909;
+          }
+          .marfil:hover{
+
+	             }
+          .zoon{
+
+
+              transition: 0.3s ease;
+ 		      -moz-transition: 1.0s ease; /* Firefox */
+ 		      -webkit-transition: 0.3s ease; /* Chrome - Safari */
+ 		      -o-transition: 1.9s ease; /* Opera */
+
+          }
+          .zoon:hover{
+
+               transform : scale(2);
+		      -moz-transform : scale(1.1); /* Firefox */
+		      -webkit-transform : scale(1.1); /* Chrome - Safari */
+		      -o-transform : scale(1.1); /* Opera */
+		      -ms-transform : scale(1.1); /* IE9 */
+
+}
+
+
+
+
+
+
+
+
+          .marfil{
+              background: #f9e0aa;
+
+
+
+
+           }
+          .marfil:hover{
+
+	             }
+
+          .amarillomd{
+              background: 	#f08b09;
+
+          }
+          .amarillocaterpilar{
+              background: #f27109;
+          }
+          .citron{
+              background: #9ab530;
+
+          }
+          .verdeclaro{
+              background: #61ac4d;
+          }
+          .verdeirlandes{
+              background:#0b682f;
+          }
+          .verdeesmeralda{
+              background: #439a89;
+          }
+          .verdemanzana{
+              background: #538a84;
+          }
+          .celestecielo{
+              background:#3e9cb6;
+          }
+          .azulclaro{
+              background: #1e63a4;
+          }
+          .azulultramar{
+              background: #2d256e;
+          }
+          .violeta{
+              background: #8b80a8;
+          }
+          .moraazul{
+              background: #563b80;
+          }
+          .rosado{
+              background: #ebbcb2;
+          }
+          .rosaencanto{
+              background: #d16f95;
+          }
+          .melocotonyellow{
+              background: #a24268;
+          }
+          .magenta{
+            background: #b34562;
+          }
+          .naranja{
+              background: #d1350f;
+          }
+          .rojoclaro{
+              background: #c52318;
+          }
+          .rojofuego{
+              background: #7f1515;
+          }
+          .rojooscuro{
+              background: #6a1b20;
+          }
+          .blanco{
+              background: #fafbf6;
+          }
+          .negro{
+              background: #080808;
+          }
+          .atlantis{
+              background: #335aa7;
+          }
+          .azulnoche{
+              background: #212a6f;
+          }
+          .aluminio{
+              background: #a5a7a6;
+          }
+          .grismedio{
+              background: #5b626a;
+          }
+          .negromate{
+              background: #10100e;
+          }
+          .blancomate{
+              background: #f9faf5;
+          }
+          .marronnogal{
+              background: #705d25;
+          }
+          .cedro{
+              background: #3e3518;
+          }
+          .marronoscuro{
+              background: #3a3726;
+          }
+          .oropremiun{
+              background: #6c523b;
+          }
+          .cromopremiun{
+              background: #777978;
+          }
+          .silverflash{
+              background: #a0a0a0;
+          }
+          .amarilloflorecente{
+              background: #c9f043;
+          }
+          .naranjaflorecente{
+              background: #ff0000;
+          }
+          .amarilloflorencente{
+              background: #bbf70a;
+          }
+          .verdeflorecente{
+              background: #5cc033;
+          }
