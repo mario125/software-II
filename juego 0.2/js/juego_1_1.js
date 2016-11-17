@@ -429,6 +429,11 @@ var Juego_1_1 =
                   baseprimal_secundario_dos=false;
 
               }
+      if(tres!=null && dos.position.y!=556)
+              {
+                  baseprimal_secundario_dos=false;
+
+              }
 
     txtPuntos.text = uno.position.y+" --"+baseprimal_secundario_uno;
     txtPuntos2.text = dos.position.y+" --"+baseprimal_secundario_dos;
