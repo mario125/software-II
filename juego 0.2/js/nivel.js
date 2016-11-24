@@ -4,12 +4,14 @@ var piso;
 var nuve;
 var cholito1;
 var cholito_negro;
+var scroolBar;
 var piramide;
 var piramide2;
 var puntoNiveles=[0,0,0,0,0];
 var puntoDB=4;
 var barra_menu;
 var pasto;
+
 
 //BOTONES
 var b_atras;
@@ -41,6 +43,8 @@ var Nivel =
     juego.load.image('b_avanzado','img/b_avanzado.png');
     juego.load.image('b_basico','img/b_basico.png');
     juego.load.image('cholito_negro','img/cholito_negro.png');
+    juego.load.image('scroolBar','img/barras/barra1.png');
+    juego.load.image('scroolBar2','img/barras/barra2.png');
 
     juego.load.spritesheet('cholito1','img/sprite_comple.png',100,200);
     juego.load.spritesheet('piramide','img/n_sprite2.png',500,500);
@@ -51,7 +55,7 @@ var Nivel =
   },
   create:function()
   {
-
+    
     juego.scale.pageAlignHorizontally = true;
     juego.scale.pageAlignVertically = true;
     juego.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -82,6 +86,7 @@ var Nivel =
     b_home=this.add.button(b_siguiente.position.x+64,ye,'b_home',this.Home,this);
     b_actualizar=this.add.button(b_home.position.x+64,ye,'b_actualizar',this.Actualizar,this);
     cholito_negro=juego.add.tileSprite(juego.width-400,ye,64,64,'cholito_negro');
+    scroolBar=juego.add.tileSprite(cholito_negro.position.x+50,ye+20,300,40,'scroolBar');
 
     b_avanzado=this.add.button(ex,ye-450,'b_avanzado',this.Avanzado,this);
     b_basico=this.add.button(ex,ye-320,'b_basico',this.Basico,this);
@@ -270,7 +275,7 @@ var Nivel =
   },
   Basico:function()
   {
-    this.state.start('Juego_1_1');
+    this.state.start('Juego1_1');
 
   },
   Avanzado:function()

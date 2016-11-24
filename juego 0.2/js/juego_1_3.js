@@ -98,22 +98,13 @@ var Juego_1_1 =
     var distancia=250;
       //_________________________________________________________________________________________________
 
-      base=1;
+    //  base=1;
 
      if (base==1)     {
-       basePrimal=juego.add.sprite(juego.width/2,juego.height-137,'dos');
-
-
-         var name="";
-
-
+       basePrimal=juego.add.sprite(juego.width/2,juego.height-137,'tres');
 
        for (var i = 1; i <=3; i++) {
-
          var ran= Math.floor(Math.random()*3)+1;
-
-
-
 
          if (ran==1&& a==0) {
            uno=juego.add.sprite(50,juego.height/2-200,'uno');
@@ -273,6 +264,7 @@ var Juego_1_1 =
         parar2=1;
   },
     pasarBloques:function()
+    
     {
         if(uno!=null)
 
@@ -349,11 +341,7 @@ var Juego_1_1 =
 
       //________________________ CHOLITO Y POSIBLES  COLITIONS_____________
 
-    juego.physics.arcade.collide(cholito1,piso1);
-    juego.physics.arcade.collide(cholito1,piso2);
-    juego.physics.arcade.collide(cholito1,uno);
-    juego.physics.arcade.collide(cholito1,dos);
-    juego.physics.arcade.collide(cholito1,tres);
+   
 
 
 
@@ -415,11 +403,12 @@ var Juego_1_1 =
       //UNO
       juego.physics.arcade.overlap(uno, dos, this.choco_uno_dos, null, this);
       juego.physics.arcade.overlap(uno, tres, this.choco_uno_tres, null, this);
+      juego.physics.arcade.overlap(dos, tres, this.choco_dos_tres, null, this);
 
 
 
 
-      if(uno!=null && uno.position.y!=555)
+      if(uno!=null && uno.position.y!=556)
           {
               baseprimal_secundario_uno=false;
 
@@ -429,35 +418,58 @@ var Juego_1_1 =
                   baseprimal_secundario_dos=false;
 
               }
-      if(tres!=null && dos.position.y!=556)
+      if(tres!=null && tres.position.y!=556)
               {
-                  baseprimal_secundario_dos=false;
+                  baseprimal_secundario_tres=false;
 
               }
+     
 
-    txtPuntos.text = uno.position.y+" --"+baseprimal_secundario_uno;
-    txtPuntos2.text = dos.position.y+" --"+baseprimal_secundario_dos;
+ 
 
 
 
     // time=juego.time.events.loop(0,this.);
+       juego.physics.arcade.collide(cholito1,piso1);
+    juego.physics.arcade.collide(cholito1,piso2);
+    juego.physics.arcade.collide(cholito1,uno);
+    juego.physics.arcade.collide(cholito1,dos);
+    juego.physics.arcade.collide(cholito1,tres);
   },
+    
 
   choco_dos_tres:function()
   {
+      if(baseprimal_secundario_dos==true &&tres.position.y>=480 )
+          {
+
+             tres.position.y=300;
+
+          }
+          if(baseprimal_secundario_tres==true &&dos.position.y>=480 )
+            {
+
+               dos.position.y=300;
+
+            }
 
 
 
   },
   choco_uno_tres:function()
   {
-    //  if(baseprimal_secundario_uno==true )
-      //  {
+      if(baseprimal_secundario_uno==true &&tres.position.y>=480 )
+          {
 
-          //  alert("uno tres"+baseprimal_secundario_uno);
+             tres.position.y=300;
 
+          }
+          if(baseprimal_secundario_tres==true &&uno.position.y>=480 )
+            {
 
-        //  }
+               uno.position.y=300;
+
+            }
   },
     choco_uno_dos:function()
     {
@@ -473,11 +485,12 @@ var Juego_1_1 =
                uno.position.y=300;
 
             }
+        
+        
     },
      choco_tres_cholito:function()
     {
-        tres.body.allowGravity=false;
-        tres.body.immovable=true;
+        tres.body.allowGravity=false; tres.body.immovable=true;
 
     },
     choco_dos_cholito:function()
@@ -501,7 +514,7 @@ var Juego_1_1 =
 
     choco_uno_basePrimal:function() {uno.position.y=basePrimal.position.y-75; baseprimal_secundario_uno=true;},
     choco_dos_basePrimal:function() {dos.position.y=basePrimal.position.y-75; baseprimal_secundario_dos=true; },
-    choco_tres_basePrimal:function() {dos.position.y=basePrimal.position.y-76; baseprimal_secundario_dos=true; },
+    choco_tres_basePrimal:function() {tres.position.y=basePrimal.position.y-75; baseprimal_secundario_tres=true; },
 
 
 chocoUno:function()
